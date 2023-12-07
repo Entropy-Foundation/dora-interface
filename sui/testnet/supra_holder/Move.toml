@@ -1,0 +1,12 @@
+[package]
+name = "supra_holder"
+version = "0.0.1"
+published-at = "0x25db5cda33c6b3a9242ab1877927c7404f1c5d6aafdbaf50096fd53b348f7002"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "testnet-v1.14.2" }
+supra_validator = { local = "../supra_validator" }
+
+[addresses]
+sui = "0x2"
+supra_holder = "0x25db5cda33c6b3a9242ab1877927c7404f1c5d6aafdbaf50096fd53b348f7002"
