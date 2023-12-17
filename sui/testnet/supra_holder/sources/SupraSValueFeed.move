@@ -1,4 +1,4 @@
-module supra_holder::svalue_feed_holder {
+module SupraOracle::SupraSValueFeed {
 
     use sui::object::UID;
 
