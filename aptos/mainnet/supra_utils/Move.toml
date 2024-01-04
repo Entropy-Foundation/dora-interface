@@ -1,0 +1,10 @@
+[package]
+name = 'supra_utils'
+version = '0.0.1'
+upgrade_policy = "compatible"
+
+[dependencies]
+AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir = 'aptos-move/framework/aptos-framework', rev = 'c7a2381ace10fd677ce549180a7f16001ef5c58d' }
+
+[addresses]
+supra_utils = "4463d20beee3387cd17389efd6d779de69ec4959b6bc794eca2a217d93189533"
