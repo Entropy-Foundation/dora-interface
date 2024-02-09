@@ -7,4 +7,4 @@ upgrade_policy = "compatible"
 AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir = 'aptos-move/framework/aptos-framework', rev = 'c7a2381ace10fd677ce549180a7f16001ef5c58d' }
 
 [addresses]
-supra_utils = "5156d144fabd00d6b84141159cd82bc1e33a78f616af8cd9754890a9e26d7b97"
+supra_utils = "7f07ca4fd4b1bc28a6d18348158ca39af540c9d3c703940a5843c5c4b126ebc4"
