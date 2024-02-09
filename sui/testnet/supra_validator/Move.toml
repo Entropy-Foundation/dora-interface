@@ -1,7 +1,7 @@
 [package]
 name = "supra_validator"
 version = "0.0.1"
-published-at = "0x277f90d256d1015a78cad646db091bec451c5bbab834b9fb70bace7885b5c698"
+published-at = "0xc81b028dc2d01e997f159d94ae476c66254bced028ac399d42dac3572e7615c7"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "testnet-v1.14.2" }
@@ -9,4 +9,4 @@ supra_utils = { local = "../supra_utils" }
 
 [addresses]
 sui = "0x2"
-supra_validator = "0x277f90d256d1015a78cad646db091bec451c5bbab834b9fb70bace7885b5c698"
+supra_validator = "0xc81b028dc2d01e997f159d94ae476c66254bced028ac399d42dac3572e7615c7"
