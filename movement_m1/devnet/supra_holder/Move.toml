@@ -1,0 +1,11 @@
+[package]
+name = 'supra_holder'
+version = '0.0.1'
+upgrade_policy = "compatible"
+
+[dependencies]
+AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir = 'aptos-move/framework/aptos-framework', rev = 'aptos-framework-v1.10.0' }
+supra_validator = { local = "../supra_validator" }
+
+[addresses]
+supra_holder = "5156d144fabd00d6b84141159cd82bc1e33a78f616af8cd9754890a9e26d7b97"
