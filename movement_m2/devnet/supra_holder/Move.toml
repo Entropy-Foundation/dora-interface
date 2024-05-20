@@ -1,0 +1,12 @@
+[package]
+name = "SupraOracle"
+version = "0.0.1"
+published-at = "0xf805349e64c9dec4b3f3b36a7f3d0fb69f9e823e0883cbe08561dd55ca6649d7"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "testnet-v1.14.2" }
+supra_validator = { local = "../supra_validator" }
+
+[addresses]
+sui = "0x2"
+SupraOracle = "0xf805349e64c9dec4b3f3b36a7f3d0fb69f9e823e0883cbe08561dd55ca6649d7"
