@@ -4,7 +4,7 @@ version = '0.0.1'
 upgrade_policy = "compatible"
 
 [dependencies]
-AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir = 'aptos-move/framework/aptos-framework', rev = 'c7a2381ace10fd677ce549180a7f16001ef5c58d' }
+AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir = 'aptos-move/framework/aptos-framework', rev = 'aptos-framework-v1.10.0' }
 supra_utils = { local = "../supra_utils" }
 
 [addresses]

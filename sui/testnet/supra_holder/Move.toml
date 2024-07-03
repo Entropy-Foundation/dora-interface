@@ -4,7 +4,7 @@ version = "0.0.1"
 published-at = "0xfd8d9e55b7e7ff1f731741297a1499e36351a0760839b046f39fa0cb35147718"
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "testnet-v1.14.2" }
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet-v1.22.0" }
 supra_validator = { local = "../supra_validator" }
 
 [addresses]
