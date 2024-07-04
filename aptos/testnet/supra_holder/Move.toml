@@ -8,4 +8,4 @@ AptosFramework = { git = 'https://github.com/aptos-labs/aptos-core.git', subdir 
 supra_validator = { local = "../supra_validator" }
 
 [addresses]
-supra_holder = "7f07ca4fd4b1bc28a6d18348158ca39af540c9d3c703940a5843c5c4b126ebc4"
+supra_holder = "5156d144fabd00d6b84141159cd82bc1e33a78f616af8cd9754890a9e26d7b97"
