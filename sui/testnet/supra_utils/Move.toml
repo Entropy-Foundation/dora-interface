@@ -1,10 +1,10 @@
 [package]
 name = "supra_utils"
 version = "0.0.1"
-published-at = "0x7e17d2c2ad25b5180664c47f54deab1e4c0ac2422bd1cb0dccb7578e478e2585"
+published-at = "0xa8f62665e4b7de1bf8c1ce46490b9a98da0ddbde16031de02e58d5b862128323"
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet-v1.22.0" }
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "main" }
 
 [addresses]
 sui = "0x2"
