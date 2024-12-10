@@ -3,11 +3,10 @@ name = "core"
 version = "1.0.0"
 
 [addresses]
-supra_oracle = "0x5615001f63d3223f194498787647bb6f8d37b8d1e6773c00dcdd894079e56190"
+supra_oracle = "0xe3948c9e3a24c51c4006ef2acc44606055117d021158f320062df099c4a94150"
 
 
 [dependencies.SupraFramework]
 git = "https://github.com/Entropy-Foundation/aptos-core.git"
 rev = "dev"
 subdir = "aptos-move/framework/supra-framework"
-
