@@ -1,2 +1,5 @@
 /.idea/
 *build/
+supra_node_logs
+supra_history
+supra.log
