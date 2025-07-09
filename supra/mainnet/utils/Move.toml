@@ -1,0 +1,11 @@
+[package]
+name = "utils"
+version = "1.0.0"
+
+[addresses]
+supra_utils="0xe3948c9e3a24c51c4006ef2acc44606055117d021158f320062df099c4a94150"
+
+[dependencies.SupraFramework]
+git = 'https://github.com/Entropy-Foundation/aptos-core.git'
+subdir = 'aptos-move/framework/supra-framework'
+rev = 'dev'
