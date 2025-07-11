@@ -14,7 +14,7 @@ module supra_utils::utils {
     /// Calculates the power of a base raised to an exponent. The result of `base` raised to the power of `exponent`
     native public fun calculate_power(base: u128, exponent: u16): u256;
 
-    /// Ensures that the specified index belongs to the given owner.
+    /// Ensures that the specified index belongs to the given owner. It will Panics if the index object does not belong to the caller.
     native public fun ensure_object_owner<T: key>(object: supra_framework::object::Object<T>, caller: &signer);
 
     /// Returns the number of bits required to represent the given u256 number.
