@@ -30,14 +30,15 @@ module supra_oracle::supra_oracle_ti {
     /// - `candle`: The aggregated candle data (open, high, low, close, volume, etc.).
     /// CandleInfo structure to return data
     struct CandleInfo has copy, drop {
-        startTime: u64,
+        start_time: u64,
         // start time of the candle
-        endTime: u64,
+        end_time: u64,
         // endtime of the candle
         candle: OHLC
         // candle open, high, low, close
     }
 
+    #[view]
     // ============================================================================
     // SIMPLE MOVING AVERAGE (SMA)
     // ============================================================================
@@ -100,7 +101,6 @@ module supra_oracle::supra_oracle_ti {
     /// - If `(latest_index - first_index) < period`, computation is not possible.
     /// - If missing-candle percentage exceeds tolerance, `none` is returned.
     /// - SMA is less responsive to recent price changes compared to EMA.
-    #[view]
     native public fun compute_sma(
         pair_id: u32,
         period: u64,
@@ -109,6 +109,8 @@ module supra_oracle::supra_oracle_ti {
     ): Option<u128>;
 
 
+
+    #[view]
     // ============================================================================
     // EXPONENTIAL MOVING AVERAGE (EMA)
     // ============================================================================
@@ -159,8 +161,6 @@ module supra_oracle::supra_oracle_ti {
     /// - EMA uses the most recent candle close price for calculations.
     /// - EMA is initialized using SMA when sufficient data becomes available.
     /// - More responsive to recent price changes than SMA due to exponential weighting.
-
-    #[view]
     native public fun compute_ema(
         pair_id: u32,
         period: u64,
@@ -169,6 +169,8 @@ module supra_oracle::supra_oracle_ti {
     ): (Option<u128>);
 
 
+
+    #[view]
     // ============================================================================
     // RELATIVE STRENGTH INDEX (RSI)
     // ============================================================================
@@ -230,8 +232,6 @@ module supra_oracle::supra_oracle_ti {
     /// - Requires at least `period + 1` candles to compute initial RSI.
     /// - Falls back to previous RSI if no recent price movement occurred.
     /// - RSI is most reliable in ranging markets, less reliable in strong trends.
-
-    #[view]
     native public fun compute_rsi(
         pair_id: u32,
         period: u64,
@@ -240,6 +240,8 @@ module supra_oracle::supra_oracle_ti {
     ): (Option<u128>);
 
 
+
+    #[view]
     // ============================================================================
     // CANDLE DATA RETRIEVAL FUNCTIONS
     // ============================================================================
@@ -277,8 +279,6 @@ module supra_oracle::supra_oracle_ti {
     /// - If `num_of_candles` exceeds available history, returns all available candles.
     /// - All price values in candles are **scaled by DECIMAL_BUFFER (10000)**.
     /// - Timestamps are in **milliseconds** since Unix epoch.
-
-    #[view]
     native public fun get_latest_candles(
         num_of_candles: u64,
         pair_id: u32,
@@ -286,6 +286,8 @@ module supra_oracle::supra_oracle_ti {
     ): vector<CandleInfo>;
 
 
+
+    #[view]
     /// Retrieves the latest `n` candles generated after a given `start_timestamp`.
     ///
     /// This is a convenience wrapper that calls `get_latest_candles_between_specific_time`
@@ -322,8 +324,6 @@ module supra_oracle::supra_oracle_ti {
     /// - Scans the most recent `num_of_candles` and filters by timestamp.
     /// - If no candles match the time criteria, returns an empty vector.
     /// - All timestamps are in **milliseconds**.
-
-    #[view]
     native public fun get_latest_candles_from_specific_time(
         pair_id: u32,
         candle_duration: u64,
@@ -331,6 +331,7 @@ module supra_oracle::supra_oracle_ti {
     ): vector<CandleInfo>;
 
 
+    #[view]
     /// Retrieves candles whose close timestamps fall within a specific time window.
     ///
     /// This provides precise time-range filtering for historical analysis.
@@ -377,7 +378,6 @@ module supra_oracle::supra_oracle_ti {
     /// - Candles are filtered by their **close timestamp**, not open timestamp.
     /// - All timestamps must be in **milliseconds** since Unix epoch.
     /// - Returns empty vector if no candles fall within the specified range.
-    #[view]
     native public fun get_latest_candles_between_specific_time(
         pair_id: u32,
         candle_duration: u64,
@@ -412,5 +412,5 @@ module supra_oracle::supra_oracle_ti {
     /// @params timestamp_value - The `TimestampedValue` struct to deserialise.
     ///
     /// @returns (value, timestamp)
-    native public fun deserialise_TimestampedValue(timestamp_value: TimestampedValue): (u128, u64);
+    native public fun deserialise_timestamped_Value(timestamp_value: TimestampedValue): (u128, u64);
 }
