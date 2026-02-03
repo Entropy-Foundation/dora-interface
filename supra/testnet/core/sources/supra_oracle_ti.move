@@ -393,7 +393,7 @@ module supra_oracle::supra_oracle_ti {
     ///          Returns the low, high, open, and close values in tuple form for easy comparison
     ///          or external verification.
     ///         (low, high, open, close)
-    native public fun deserialise_OHLC(
+    native public fun deserialise_ohlc(
         candle: OHLC
     ): (TimestampedValue, TimestampedValue, TimestampedValue, TimestampedValue);
 
