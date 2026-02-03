@@ -412,5 +412,5 @@ module supra_oracle::supra_oracle_ti {
     /// @params timestamp_value - The `TimestampedValue` struct to deserialise.
     ///
     /// @returns (value, timestamp)
-    native public fun deserialise_timestamped_Value(timestamp_value: TimestampedValue): (u128, u64);
+    native public fun deserialise_timestamped_value(timestamp_value: TimestampedValue): (u128, u64);
 }
