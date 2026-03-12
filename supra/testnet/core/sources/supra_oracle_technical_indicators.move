@@ -1,4 +1,4 @@
-module supra_oracle::supra_oracle_ti {
+module supra_oracle::supra_oracle_technical_indicators {
 
     use std::option::{Option};
 
@@ -109,7 +109,6 @@ module supra_oracle::supra_oracle_ti {
     ): Option<u128>;
 
 
-
     #[view]
     // ============================================================================
     // EXPONENTIAL MOVING AVERAGE (EMA)
@@ -167,7 +166,6 @@ module supra_oracle::supra_oracle_ti {
         candle_duration: u64,
         missing_candles_tolerance_percentage: u64
     ): (Option<u128>);
-
 
 
     #[view]
@@ -240,7 +238,6 @@ module supra_oracle::supra_oracle_ti {
     ): (Option<u128>);
 
 
-
     #[view]
     // ============================================================================
     // CANDLE DATA RETRIEVAL FUNCTIONS
@@ -284,7 +281,6 @@ module supra_oracle::supra_oracle_ti {
         pair_id: u32,
         candle_duration: u64
     ): vector<CandleInfo>;
-
 
 
     #[view]
